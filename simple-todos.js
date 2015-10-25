@@ -4,9 +4,11 @@ if (Meteor.isClient) {
   // This code only runs on the client
   Template.body.helpers({
     tasks: function () {
-      return Tasks.find({});
-      
-        Template.body.events({
+            return Tasks.find({});
+    }
+  });
+ 
+  Template.body.events({
     "submit .new-task": function (event) {
       // Prevent default browser form submit
       event.preventDefault();
@@ -22,8 +24,6 @@ if (Meteor.isClient) {
  
       // Clear form
       event.target.text.value = "";
-    }
-  });
     }
   });
 }
