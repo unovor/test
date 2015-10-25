@@ -1,32 +1,7 @@
 <head>
   <title>Todo List</title>
 </head>
- 
+
 <body>
-  <div id="render-target">
-    <header>
-      <h1>Todo List</h1>
-      <form class = "new-task">
-        <input type ="text" name ="text" placeholder = "type to add new tasks" />
-        
-      </form>
-    </header>
- 
-    <ul>
-      {{#each tasks}}
-        {{> task}}
-      {{/each}}
-    </ul>
-  </div>
+  <div id="render-target"></div>
 </body>
- 
-<template name="task">
-    <li class="{{#if checked}}checked{{/if}}">
-    <button class="delete">&times;</button>
- 
-    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
- 
-    <span class="text">{{text}}</span>
-  </li>
-  <li>{{text}}</li>
-</template>
